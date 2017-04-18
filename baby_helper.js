@@ -88,7 +88,7 @@ BabyHelper.prototype.getBabyObject = function( ) {
 
 BabyHelper.prototype.logDiaper = function(changeType) {
     var self=this;
-    this.login().then(function(loginState)
+    return this.login().then(function(loginState)
     {
         return self.getBabyObject();
     }).then(function(babyObj){
@@ -123,6 +123,7 @@ BabyHelper.prototype.logDiaper = function(changeType) {
         var currentSyncId = fs.readFileSync(syncIdFile).toString();
         var newSyncId = parseInt(currentSyncId)+1;
         fs.writeFileSync(syncIdFile,newSyncId);
+        return true;
         }).catch(function(err){
     throw new Error("Unable to Log Diaper Change" + err)
 });
