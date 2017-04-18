@@ -1,0 +1,19 @@
+{
+  "name": "dash_baby_tracker",
+  "version": "1.0.0",
+  "description": "Dash Button Baby Tracking",
+  "main": "index.js",
+  "author": "Nick Rom",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "request": "^2.3.4",
+    "request-promise": "^4.2.0",
+    "dash-button": "^2.0.1",
+    "uuid": "^3.0.1",
+    "dateformat": "^2.0.0"
+  },
+  "scripts": {
+    "scan": "dash-button scan"
+  }
+}
